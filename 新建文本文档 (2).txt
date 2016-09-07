@@ -1,0 +1,162 @@
+超文本标记语言或超文本链接标记语言
+
+文本标记语言
+HTML4
+HTML5 重点要求语义
+XHTNL
+<a href="#">新浪</a>标记标签   a表示超链接
+<p>我是一个段落</P>    p表示段落
+<P>我是第一个段落。<h1>a\我是主标题
+HTML标记主要的作用是用啦规定语义
+<h1></h1>
+<Ul>
+        <LI></LI>
+</Ul>
+<img src=""/>
+<html>
+        <head>
+           <title><title>
+           <style><style> 
+        <head> 
+        <bodu>
+           <h1><h>
+           <ol>
+                <li><a  href="htpp:/www.zhufengpeixun">学习HTML基础</a><li>
+                <li></li>
+           <p>第一天来这里也不知是好是坏 ,先试试吧<p>
+           <form>
+               <input type="text"/>
+           </form>         
+</body>    主体
+</html>
+<meta>  CONTENT关键字name=keywords
+<MATA>  NAME=DESCRIPTION CONTENT=""   自我介绍
+超级链接格式
+<a href="http://www.0000.com" title="打开东西" target="_blank">百度云</a>
+<a href="http://www.0000.com">百度</a>
+
+
+
+
+
+
+
+--基础---
+在html中 规定 所有xhtm标记 都要小写 所有的标记 都要关闭
+--html文件结构
+1做网页---html文件--用浏览器
+2所有html文件都有一个基本结构--框架
+
+1.文件及结构
+
+<html></html>开始与结束  所有的元素都要放在这对标记中
+ ******如何调出文件的扩展名
+工具文件选项
+---查看--去掉  隐藏已知文件的类型的扩展名
+格式
+meta name="description" content=""
+<meta content="网页设计 女友学不来编程来学网页呗"name="keywords" />
+<meta name="author"content="作者名">
+keywords 分割
+description 描述
+charset 字符集
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  for(var i=0; i<ary.length; i++){//决定比较的轮数
+        for(var j=0; j<ary.length-1-i; j++){ //决定比较的次数；
+            if(ary[j]>ary[j+1]){
+                var tmp=ary[j+1];
+                ary[j+1]=ary[j];
+                ary[j]=tmp;
+            }
+        }
+
+    }
+    console.log(ary);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ function insertSort(ary){
+        var left=ary.splice(0,1);
+        for(var i=0; i<ary.length; i++){
+            var cur=ary[i];
+            for(var j=left.length-1; j>=0;){
+                if(cur<=left[j]){
+                    j--;
+                    if(j==-1){
+                        left.unshift(cur);
+                    }
+                }else{
+                    left.splice(j+1,0,cur);
+                    break;
+                }
+            }
+        }
+        return left;
+    }
+    console.log(insertSort(ary));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ var ary=[23,14,2,6];
+  function ipck(ary){
+      if(ary.length<=1){
+          return ary;
+      }
+    var num=Math.floor(ary.length/2);
+    var numbe=ary.splice(num,1)[0]
+    var left=[]
+    var right=[]
+    for(var i=0;i<ary.length;i++){
+        var cur=ary[i]
+        if(cur<numbe){
+            left.push(cur)
+        }else{
+            right.push(cur)
+        }
+    }
+      return ipck(left).concat([numbe],ipck(right))
+  }
+    console.log(ipck(ary))
